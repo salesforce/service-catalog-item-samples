@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SvcCatalogItemDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <categories>
+        <isPrimaryCategory>true</isPrimaryCategory>
+        <sortOrder>5</sortOrder>
+        <svcCatalogCategory>category_1639787742778_Software</svcCatalogCategory>
+    </categories>
+    <description>Request a license to use Figma Software Suite.</description>
+    <flow>item_1640135747597_NewFigmaSoftwareLicense</flow>
+    <image>AdobeStock_195159146</image>
+    <isFeatured>false</isFeatured>
+    <isProtected>false</isProtected>
+    <masterLabel>[Sample] New Figma Software License</masterLabel>
+    <status>Draft</status>
+</SvcCatalogItemDef>

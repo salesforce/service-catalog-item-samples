@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>53.0</apiVersion>
+    <formulas>
+        <name>org_base_url</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Api.Partner_Server_URL_530}, FIND(&apos;/services/&apos;, {!$Api.Partner_Server_URL_530}))</expression>
+    </formulas>
+    <label>[Sample] New Salesforce Org User</label>
+    <processType>ServiceCatalogItemFlow</processType>
+    <screens>
+        <name>additional_questions</name>
+        <label>[Sample] New Salesforce Org User Questions</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Fulfillment_Flow_Subflow</targetReference>
+        </connector>
+        <fields>
+            <name>Email_address</name>
+            <extensionName>flowruntime:email</extensionName>
+            <fieldText>Email address</fieldText>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Email address</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>required</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>Which_org_do_you_need_a_user_for</name>
+            <dataType>String</dataType>
+            <fieldText>What org would you like to add the user to?</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>additional_questions</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
+    <subflows>
+        <name>Fulfillment_Flow_Subflow</name>
+        <label>Fulfillment Flow</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <flowName>Create_Case_Assigned_With_Assn_Rules</flowName>
+        <inputAssignments>
+            <name>Input_Description</name>
+            <value>
+                <stringValue>Email address
+{!Email_address.value}
+
+What org would you like to add the user to?
+{!Which_org_do_you_need_a_user_for}
+
+</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Input_RecordTypeApiName</name>
+            <value>
+                <stringValue>IT</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Input_Origin</name>
+            <value>
+                <stringValue>Web</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Input_Priority</name>
+            <value>
+                <stringValue>Medium</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Input_Status</name>
+            <value>
+                <stringValue>New</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Input_Subject</name>
+            <value>
+                <stringValue>New Salesforce User Request</stringValue>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <variables>
+        <name>SvcCatalogAttachedContentDocIds</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

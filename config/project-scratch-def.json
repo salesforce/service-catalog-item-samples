@@ -1,0 +1,24 @@
+{
+    "orgName": "Service Catalog Recipes",
+    "edition": "Partner Developer",
+    "features": [
+        "ForceComPlatform",
+        "EmployeeExperience",
+        "PersonAccounts",
+        "ServiceCatalog"
+    ],
+    "language": "en_US",
+    "settings": {
+        "lightningExperienceSettings": {
+            "enableS1DesktopEnabled": true
+        },
+        "languageSettings": {
+            "enableTranslationWorkbench": true,
+            "enablePlatformLanguages": true,
+            "enableEndUserLanguages": true
+        },
+        "mobileSettings": {
+            "enableS1EncryptedStoragePref2": false
+        }
+    }
+}

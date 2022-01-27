@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SvcCatalogItemDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <categories>
+        <isPrimaryCategory>true</isPrimaryCategory>
+        <sortOrder>1</sortOrder>
+        <svcCatalogCategory>category_1640041845033_WorkplaceServices</svcCatalogCategory>
+    </categories>
+    <description>Pick a time to relocate desks within the same building.</description>
+    <flow>item_1640044491359_DeskRelocation</flow>
+    <image>deskRelocation</image>
+    <isFeatured>true</isFeatured>
+    <isProtected>false</isProtected>
+    <masterLabel>[Sample] Desk Relocation</masterLabel>
+    <status>Draft</status>
+</SvcCatalogItemDef>

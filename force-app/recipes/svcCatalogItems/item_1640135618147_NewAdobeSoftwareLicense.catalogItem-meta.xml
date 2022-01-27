@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SvcCatalogItemDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <categories>
+        <isPrimaryCategory>true</isPrimaryCategory>
+        <sortOrder>4</sortOrder>
+        <svcCatalogCategory>category_1639787742778_Software</svcCatalogCategory>
+    </categories>
+    <description>Request a license to use Adobe Software Suite.</description>
+    <flow>item_1640135618147_NewAdobeSoftwareLicense</flow>
+    <image>AdobeStock_270350073</image>
+    <isFeatured>false</isFeatured>
+    <isProtected>false</isProtected>
+    <masterLabel>[Sample] New Adobe Software License</masterLabel>
+    <status>Draft</status>
+</SvcCatalogItemDef>

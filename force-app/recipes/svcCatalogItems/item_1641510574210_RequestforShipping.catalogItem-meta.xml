@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SvcCatalogItemDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <categories>
+        <isPrimaryCategory>true</isPrimaryCategory>
+        <sortOrder>0</sortOrder>
+        <svcCatalogCategory>category_1640041845033_WorkplaceServices</svcCatalogCategory>
+    </categories>
+    <description>Request shipment services.</description>
+    <flow>item_1641510574210_RequestforShipping</flow>
+    <image>shipping</image>
+    <isFeatured>false</isFeatured>
+    <isProtected>false</isProtected>
+    <masterLabel>[Sample] Request Shipping</masterLabel>
+    <status>Draft</status>
+</SvcCatalogItemDef>

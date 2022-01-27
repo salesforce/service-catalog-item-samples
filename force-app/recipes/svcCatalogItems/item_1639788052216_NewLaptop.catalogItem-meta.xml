@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SvcCatalogItemDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <categories>
+        <isPrimaryCategory>true</isPrimaryCategory>
+        <sortOrder>1</sortOrder>
+        <svcCatalogCategory>category_1639787736046_Hardware</svcCatalogCategory>
+    </categories>
+    <categories>
+        <isPrimaryCategory>false</isPrimaryCategory>
+        <sortOrder>1</sortOrder>
+        <svcCatalogCategory>category_1639787728370_NewHireEssentials</svcCatalogCategory>
+    </categories>
+    <description>Request a new laptop from the technology organization.</description>
+    <flow>item_1639788052216_NewLaptop</flow>
+    <image>requestLaptop</image>
+    <isFeatured>true</isFeatured>
+    <isProtected>false</isProtected>
+    <masterLabel>[Sample] New Laptop</masterLabel>
+    <status>Draft</status>
+</SvcCatalogItemDef>

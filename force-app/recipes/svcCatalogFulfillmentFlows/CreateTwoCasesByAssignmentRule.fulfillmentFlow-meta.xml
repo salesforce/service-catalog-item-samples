@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SvcCatalogFulfillmentFlow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Create two cases routed by assignment rules. Each case has the same description. This flow uses employee data to find the current user contact details and populate the case contact. If you do not have employee data in your org, choose an account to link to the case.</description>
+    <flow>Create_Two_Cases_by_Assignment_Rule</flow>
+    <isProtected>false</isProtected>
+    <items>
+        <catalogInputVariable>Input_RecordTypeApiName_1</catalogInputVariable>
+        <displayType>Text</displayType>
+        <isAdditionalQuestionsInputVariable>false</isAdditionalQuestionsInputVariable>
+        <isRequired>false</isRequired>
+        <masterLabel>First Record Type Developer Name</masterLabel>
+    </items>
+    <items>
+        <catalogInputVariable>Input_AssignmentRule_1</catalogInputVariable>
+        <displayType>Text</displayType>
+        <isAdditionalQuestionsInputVariable>false</isAdditionalQuestionsInputVariable>
+        <isRequired>false</isRequired>
+        <masterLabel>First Assignment Rule Developer Name</masterLabel>
+    </items>
+    <items>
+        <catalogInputVariable>Input_AccountId_1</catalogInputVariable>
+        <displayType>Lookup</displayType>
+        <fieldDefinition>AccountId</fieldDefinition>
+        <fieldLookupDomain>Account</fieldLookupDomain>
+        <isAdditionalQuestionsInputVariable>false</isAdditionalQuestionsInputVariable>
+        <isRequired>false</isRequired>
+        <masterLabel>First Related Account</masterLabel>
+        <objectLookupDomain>Contact</objectLookupDomain>
+    </items>
+    <items>
+        <catalogInputVariable>Input_Origin_1</catalogInputVariable>
+        <displayType>Picklist</displayType>
+        <fieldDefinition>Origin</fieldDefinition>
+        <isAdditionalQuestionsInputVariable>false</isAdditionalQuestionsInputVariable>
+        <isRequired>true</isRequired>
+        <masterLabel>First Case Origin</masterLabel>
+        <objectLookupDomain>Case</objectLookupDomain>
+    </items>
+    <items>
+        <catalogInputVariable>Input_Priority_1</catalogInputVariable>
+        <displayType>Picklist</displayType>
+        <fieldDefinition>Priority</fieldDefinition>
+        <isAdditionalQuestionsInputVariable>false</isAdditionalQuestionsInputVariable>
+        <isRequired>false</isRequired>
+        <masterLabel>First Case Priority</masterLabel>
+        <objectLookupDomain>Case</objectLookupDomain>
+    </items>
+    <items>
+        <catalogInputVariable>Input_Status_1</catalogInputVariable>
+        <displayType>Picklist</displayType>
+        <fieldDefinition>Status</fieldDefinition>
+        <isAdditionalQuestionsInputVariable>false</isAdditionalQuestionsInputVariable>
+        <isRequired>true</isRequired>
+        <masterLabel>First Case Status</masterLabel>
+        <objectLookupDomain>Case</objectLookupDomain>
+    </items>
+    <items>
+        <catalogInputVariable>Input_Subject_1</catalogInputVariable>
+        <displayType>Text</displayType>
+        <isAdditionalQuestionsInputVariable>false</isAdditionalQuestionsInputVariable>
+        <isRequired>true</isRequired>
+        <masterLabel>First Case Subject</masterLabel>
+    </items>
+    <items>
+        <catalogInputVariable>Input_RecordTypeApiName_2</catalogInputVariable>
+        <displayType>Text</displayType>
+        <isAdditionalQuestionsInputVariable>false</isAdditionalQuestionsInputVariable>
+        <isRequired>false</isRequired>
+        <masterLabel>Second Record Type Developer Name</masterLabel>
+    </items>
+    <items>
+        <catalogInputVariable>Input_AssignmentRule_2</catalogInputVariable>
+        <displayType>Text</displayType>
+        <isAdditionalQuestionsInputVariable>false</isAdditionalQuestionsInputVariable>
+        <isRequired>false</isRequired>
+        <masterLabel>Second Assignment Rule Developer Name</masterLabel>
+    </items>
+    <items>
+        <catalogInputVariable>Input_AccountId_2</catalogInputVariable>
+        <displayType>Lookup</displayType>
+        <fieldDefinition>AccountId</fieldDefinition>
+        <fieldLookupDomain>Account</fieldLookupDomain>
+        <isAdditionalQuestionsInputVariable>false</isAdditionalQuestionsInputVariable>
+        <isRequired>false</isRequired>
+        <masterLabel>Second Related Account</masterLabel>
+        <objectLookupDomain>Contact</objectLookupDomain>
+    </items>
+    <items>
+        <catalogInputVariable>Input_Origin_2</catalogInputVariable>
+        <displayType>Picklist</displayType>
+        <fieldDefinition>Origin</fieldDefinition>
+        <isAdditionalQuestionsInputVariable>false</isAdditionalQuestionsInputVariable>
+        <isRequired>true</isRequired>
+        <masterLabel>Second Case Origin</masterLabel>
+        <objectLookupDomain>Case</objectLookupDomain>
+    </items>
+    <items>
+        <catalogInputVariable>Input_Priority_2</catalogInputVariable>
+        <displayType>Picklist</displayType>
+        <fieldDefinition>Priority</fieldDefinition>
+        <isAdditionalQuestionsInputVariable>false</isAdditionalQuestionsInputVariable>
+        <isRequired>false</isRequired>
+        <masterLabel>Second Case Priority</masterLabel>
+        <objectLookupDomain>Case</objectLookupDomain>
+    </items>
+    <items>
+        <catalogInputVariable>Input_Status_2</catalogInputVariable>
+        <displayType>Picklist</displayType>
+        <fieldDefinition>Status</fieldDefinition>
+        <isAdditionalQuestionsInputVariable>false</isAdditionalQuestionsInputVariable>
+        <isRequired>true</isRequired>
+        <masterLabel>Second Case Status</masterLabel>
+        <objectLookupDomain>Case</objectLookupDomain>
+    </items>
+    <items>
+        <catalogInputVariable>Input_Subject_2</catalogInputVariable>
+        <displayType>Text</displayType>
+        <isAdditionalQuestionsInputVariable>false</isAdditionalQuestionsInputVariable>
+        <isRequired>true</isRequired>
+        <masterLabel>Second Case Subject</masterLabel>
+    </items>
+    <items>
+        <catalogInputVariable>Input_Description</catalogInputVariable>
+        <displayType>Text</displayType>
+        <isAdditionalQuestionsInputVariable>true</isAdditionalQuestionsInputVariable>
+        <isRequired>false</isRequired>
+        <masterLabel>Case Description</masterLabel>
+    </items>
+    <masterLabel>[Sample] Create Two Cases by Assignment Rule</masterLabel>
+</SvcCatalogFulfillmentFlow>

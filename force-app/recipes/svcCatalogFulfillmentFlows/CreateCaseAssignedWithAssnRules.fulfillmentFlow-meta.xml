@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SvcCatalogFulfillmentFlow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Create a case assigned with either a given assignment rule name, or if no name is provided, with the default active assignment rule.</description>
+    <flow>Create_Case_Assigned_With_Assn_Rules</flow>
+    <isProtected>false</isProtected>
+    <items>
+        <catalogInputVariable>Input_RecordTypeApiName</catalogInputVariable>
+        <displayType>Text</displayType>
+        <isAdditionalQuestionsInputVariable>false</isAdditionalQuestionsInputVariable>
+        <isRequired>false</isRequired>
+        <masterLabel>Record Type Developer Name</masterLabel>
+    </items>
+    <items>
+        <catalogInputVariable>Input_AssignmentRuleName</catalogInputVariable>
+        <displayType>Text</displayType>
+        <isAdditionalQuestionsInputVariable>false</isAdditionalQuestionsInputVariable>
+        <isRequired>false</isRequired>
+        <masterLabel>Assignment Rule Name (leave blank for default)</masterLabel>
+    </items>
+    <items>
+        <catalogInputVariable>Input_AccountId</catalogInputVariable>
+        <displayType>Lookup</displayType>
+        <fieldDefinition>AccountId</fieldDefinition>
+        <fieldLookupDomain>Account</fieldLookupDomain>
+        <isAdditionalQuestionsInputVariable>false</isAdditionalQuestionsInputVariable>
+        <isRequired>false</isRequired>
+        <masterLabel>Related Account</masterLabel>
+        <objectLookupDomain>Contact</objectLookupDomain>
+    </items>
+    <items>
+        <catalogInputVariable>Input_Origin</catalogInputVariable>
+        <displayType>Picklist</displayType>
+        <fieldDefinition>Origin</fieldDefinition>
+        <isAdditionalQuestionsInputVariable>false</isAdditionalQuestionsInputVariable>
+        <isRequired>true</isRequired>
+        <masterLabel>Case Origin</masterLabel>
+        <objectLookupDomain>Case</objectLookupDomain>
+    </items>
+    <items>
+        <catalogInputVariable>Input_Priority</catalogInputVariable>
+        <displayType>Picklist</displayType>
+        <fieldDefinition>Priority</fieldDefinition>
+        <isAdditionalQuestionsInputVariable>false</isAdditionalQuestionsInputVariable>
+        <isRequired>false</isRequired>
+        <masterLabel>Case Priority</masterLabel>
+        <objectLookupDomain>Case</objectLookupDomain>
+    </items>
+    <items>
+        <catalogInputVariable>Input_Status</catalogInputVariable>
+        <displayType>Picklist</displayType>
+        <fieldDefinition>Status</fieldDefinition>
+        <isAdditionalQuestionsInputVariable>false</isAdditionalQuestionsInputVariable>
+        <isRequired>true</isRequired>
+        <masterLabel>Case Status</masterLabel>
+        <objectLookupDomain>Case</objectLookupDomain>
+    </items>
+    <items>
+        <catalogInputVariable>Input_Subject</catalogInputVariable>
+        <displayType>Text</displayType>
+        <isAdditionalQuestionsInputVariable>false</isAdditionalQuestionsInputVariable>
+        <isRequired>true</isRequired>
+        <masterLabel>Case Subject</masterLabel>
+    </items>
+    <items>
+        <catalogInputVariable>Input_Description</catalogInputVariable>
+        <displayType>Text</displayType>
+        <isAdditionalQuestionsInputVariable>true</isAdditionalQuestionsInputVariable>
+        <isRequired>false</isRequired>
+        <masterLabel>Case Description</masterLabel>
+    </items>
+    <masterLabel>[Sample] Create Case With Assignment Rule</masterLabel>
+</SvcCatalogFulfillmentFlow>

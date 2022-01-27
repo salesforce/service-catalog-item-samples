@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SvcCatalogItemDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <categories>
+        <isPrimaryCategory>true</isPrimaryCategory>
+        <sortOrder>3</sortOrder>
+        <svcCatalogCategory>category_1639787736046_Hardware</svcCatalogCategory>
+    </categories>
+    <description>To log into protected software environments, request a Yubikey.</description>
+    <flow>item_1640134829563_NewYubikey</flow>
+    <image>securitykey</image>
+    <isFeatured>false</isFeatured>
+    <isProtected>false</isProtected>
+    <masterLabel>[Sample] New Yubikey</masterLabel>
+    <status>Draft</status>
+</SvcCatalogItemDef>

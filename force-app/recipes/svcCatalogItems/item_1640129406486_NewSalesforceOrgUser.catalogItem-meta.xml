@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SvcCatalogItemDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <categories>
+        <isPrimaryCategory>true</isPrimaryCategory>
+        <sortOrder>0</sortOrder>
+        <svcCatalogCategory>category_1639787742778_Software</svcCatalogCategory>
+    </categories>
+    <categories>
+        <isPrimaryCategory>false</isPrimaryCategory>
+        <sortOrder>0</sortOrder>
+        <svcCatalogCategory>category_1639787728370_NewHireEssentials</svcCatalogCategory>
+    </categories>
+    <description>Request a user login for a given Salesforce org.</description>
+    <flow>item_1640129406486_NewSalesforceOrgUser</flow>
+    <image>newSalesforceUser</image>
+    <isFeatured>false</isFeatured>
+    <isProtected>false</isProtected>
+    <masterLabel>[Sample] New Salesforce Org User</masterLabel>
+    <sharedTo>
+        <group>People_Managers</group>
+    </sharedTo>
+    <status>Draft</status>
+</SvcCatalogItemDef>

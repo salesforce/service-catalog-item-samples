@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SvcCatalogCategory xmlns="http://soap.sforce.com/2006/04/metadata">
+    <image>AdobeStock_209777524</image>
+    <isActive>true</isActive>
+    <isProtected>false</isProtected>
+    <masterLabel>[Sample] Technology</masterLabel>
+    <sortOrder>2</sortOrder>
+</SvcCatalogCategory>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SvcCatalogItemDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <categories>
+        <isPrimaryCategory>true</isPrimaryCategory>
+        <sortOrder>2</sortOrder>
+        <svcCatalogCategory>category_1640041845033_WorkplaceServices</svcCatalogCategory>
+    </categories>
+    <description>Submit a request for workplace services to restock the beverages in an office kitchen.</description>
+    <flow>item_1640136084842_KitchenBeverageRestock</flow>
+    <image>restock</image>
+    <isFeatured>false</isFeatured>
+    <isProtected>false</isProtected>
+    <masterLabel>[Sample] Kitchen Beverage Restock</masterLabel>
+    <status>Draft</status>
+</SvcCatalogItemDef>

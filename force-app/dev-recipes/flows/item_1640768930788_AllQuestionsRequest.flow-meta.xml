@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>53.0</apiVersion>
+    <assignments>
+        <name>Attachment_docId_assignment</name>
+        <label>Attachment_docId_assignment</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>Attachment_docId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Attachment_loopVar</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference
+      >SvcCatalogAttachedContentDocIds</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Attachment_loopVar</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Attachment_loop</targetReference>
+        </connector>
+    </assignments>
+    <choices>
+        <name>option1</name>
+        <choiceText>Option 1</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Option 1</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>option11</name>
+        <choiceText>Picklist Option 2</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Picklist Option 2</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>option13</name>
+        <choiceText>Picklist Option 3</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Picklist Option 3</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>option15</name>
+        <choiceText>Picklist Option 4</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Picklist Option 4</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>option2</name>
+        <choiceText>Option 2</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Option 2</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>option4</name>
+        <choiceText>Option 3</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Option 3</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>option7</name>
+        <choiceText>Picklist Option 1</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Picklist Option 1</stringValue>
+        </value>
+    </choices>
+    <formulas>
+        <name>org_base_url</name>
+        <dataType>String</dataType>
+        <expression
+    >LEFT({!$Api.Partner_Server_URL_530}, FIND(&apos;/services/&apos;, {!$Api.Partner_Server_URL_530}))</expression>
+    </formulas>
+    <label>All Questions Request</label>
+    <loops>
+        <name>Attachment_loop</name>
+        <label>Attachment Loop</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNextValueToReference
+    >Attachment_loopVar</assignNextValueToReference>
+        <collectionReference>Attachment_docIds</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Attachment_docId_assignment</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Fulfillment_Flow_Subflow</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processType>ServiceCatalogItemFlow</processType>
+    <screens>
+        <name>additional_questions</name>
+        <label>All Questions Request Questions</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Attachment_loop</targetReference>
+        </connector>
+        <fields>
+            <name>Attachment</name>
+            <extensionName>forceContent:fileUpload</extensionName>
+            <fieldText>Attachment</fieldText>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Attachment</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>multiple</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </inputParameters>
+            <isRequired>true</isRequired>
+            <outputParameters>
+                <assignToReference>Attachment_docIds</assignToReference>
+                <name>contentDocIds</name>
+            </outputParameters>
+        </fields>
+        <fields>
+            <name>Checkbox</name>
+            <choiceReferences>option1</choiceReferences>
+            <choiceReferences>option2</choiceReferences>
+            <choiceReferences>option4</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Checkbox</fieldText>
+            <fieldType>MultiSelectCheckboxes</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Date</name>
+            <dataType>Date</dataType>
+            <fieldText>Date</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Datetime</name>
+            <dataType>DateTime</dataType>
+            <fieldText>Datetime</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Display_Text</name>
+            <fieldText>Display Text</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Email</name>
+            <extensionName>flowruntime:email</extensionName>
+            <fieldText>Email</fieldText>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Email</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>required</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </inputParameters>
+            <isRequired>false</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>Lookup</name>
+            <extensionName>flowruntime:lookup</extensionName>
+            <fieldText>Lookup</fieldText>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Lookup</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>fieldApiName</name>
+                <value>
+                    <stringValue>UserId</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>objectApiName</name>
+                <value>
+                    <stringValue>Employee</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>required</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </inputParameters>
+            <isRequired>false</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>Multiline_Text</name>
+            <fieldText>Multiline Text</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Slider</name>
+            <extensionName>flowruntime:slider</extensionName>
+            <fieldText>Slider</fieldText>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>min</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>value</name>
+                <value>
+                    <numberValue>1.0</numberValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>max</name>
+                <value>
+                    <numberValue>100.0</numberValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Slider</stringValue>
+                </value>
+            </inputParameters>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>Picklist</name>
+            <choiceReferences>option11</choiceReferences>
+            <choiceReferences>option13</choiceReferences>
+            <choiceReferences>option15</choiceReferences>
+            <choiceReferences>option7</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Picklist</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Single_Line_Text</name>
+            <dataType>String</dataType>
+            <fieldText>Single Line Text</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>URL</name>
+            <extensionName>flowruntime:url</extensionName>
+            <fieldText>URL</fieldText>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>URL</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>required</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </inputParameters>
+            <isRequired>false</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>additional_questions</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Fulfillment_Flow_Subflow</name>
+        <label>Fulfillment Flow</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <flowName>Testing_Create_Case</flowName>
+        <inputAssignments>
+            <name>CaseDescription</name>
+            <value>
+                <stringValue>Attachment
+{!org_base_url}{!Attachment_docId}
+
+Checkbox
+{!Checkbox}
+
+Date
+{!Date}
+
+Datetime
+{!Datetime}
+
+Display Text
+
+Email
+{!Email.value}
+
+Lookup
+{!Lookup.recordName} {!org_base_url}{!Lookup.recordId}
+
+Multiline Text
+{!Multiline_Text}
+
+Slider
+{!Slider.value}
+
+Picklist
+{!Picklist}
+
+Single Line Text
+{!Single_Line_Text}
+
+URL
+{!URL.value}
+
+</stringValue>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <variables>
+        <name>Attachment_docId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Attachment_docIds</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Attachment_loopVar</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>SvcCatalogAttachedContentDocIds</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

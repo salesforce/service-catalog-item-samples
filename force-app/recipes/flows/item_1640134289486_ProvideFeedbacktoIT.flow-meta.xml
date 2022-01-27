@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>53.0</apiVersion>
+    <choices>
+        <name>option1</name>
+        <choiceText>High</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>High</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>option2</name>
+        <choiceText>Medium</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Medium</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>option3</name>
+        <choiceText>Low</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Low</stringValue>
+        </value>
+    </choices>
+    <formulas>
+        <name>org_base_url</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Api.Partner_Server_URL_530}, FIND(&apos;/services/&apos;, {!$Api.Partner_Server_URL_530}))</expression>
+    </formulas>
+    <label>[Sample] Provide Feedback to IT</label>
+    <processType>ServiceCatalogItemFlow</processType>
+    <screens>
+        <name>additional_questions</name>
+        <label>[Sample] Provide Feedback to IT Questions</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Fulfillment_Flow_Subflow</targetReference>
+        </connector>
+        <fields>
+            <name>Is_it_urgent</name>
+            <choiceReferences>option1</choiceReferences>
+            <choiceReferences>option2</choiceReferences>
+            <choiceReferences>option3</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Is it urgent?</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Feedback</name>
+            <fieldText>Feedback</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>additional_questions</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
+    <subflows>
+        <name>Fulfillment_Flow_Subflow</name>
+        <label>Fulfillment Flow</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <flowName>Create_Case_Assigned_With_Assn_Rules</flowName>
+        <inputAssignments>
+            <name>Input_Description</name>
+            <value>
+                <stringValue>Is it urgent?
+{!Is_it_urgent}
+
+Feedback
+{!Feedback}
+
+</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Input_RecordTypeApiName</name>
+            <value>
+                <stringValue>IT</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Input_Origin</name>
+            <value>
+                <stringValue>Web</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Input_Priority</name>
+            <value>
+                <stringValue>Medium</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Input_Status</name>
+            <value>
+                <stringValue>New</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>Input_Subject</name>
+            <value>
+                <stringValue>Feedback from an Employee</stringValue>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <variables>
+        <name>SvcCatalogAttachedContentDocIds</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SvcCatalogItemDef xmlns="http://soap.sforce.com/2006/04/metadata">
+    <categories>
+        <isPrimaryCategory>true</isPrimaryCategory>
+        <sortOrder>0</sortOrder>
+        <svcCatalogCategory>category_1641474780632_General</svcCatalogCategory>
+    </categories>
+    <description>Send a feedback case to the IT team.</description>
+    <flow>item_1640134289486_ProvideFeedbacktoIT</flow>
+    <image>provideFeedback</image>
+    <isFeatured>false</isFeatured>
+    <isProtected>false</isProtected>
+    <masterLabel>[Sample] Provide Feedback to IT</masterLabel>
+    <status>Draft</status>
+</SvcCatalogItemDef>

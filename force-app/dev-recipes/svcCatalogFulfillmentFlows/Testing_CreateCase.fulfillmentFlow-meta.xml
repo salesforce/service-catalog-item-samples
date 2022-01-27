@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SvcCatalogFulfillmentFlow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <flow>Testing_Create_Case</flow>
+    <isProtected>false</isProtected>
+    <masterLabel>[Sample] Testing Create Case</masterLabel>
+    <description>Builder wants to add &quot;Additional Questions,&quot; so the fulfillment flow creates a text input for that string</description>
+    <items>
+        <catalogInputVariable>CaseDescription</catalogInputVariable>
+        <masterLabel>Case Description</masterLabel>
+        <displayType>Text</displayType>
+        <fieldLookupDomain/>
+        <objectLookupDomain/>
+        <lookupDomainFieldType/>
+        <isRequired>false</isRequired>
+        <isAdditionalQuestionsInputVariable>true</isAdditionalQuestionsInputVariable>
+    </items>
+</SvcCatalogFulfillmentFlow>

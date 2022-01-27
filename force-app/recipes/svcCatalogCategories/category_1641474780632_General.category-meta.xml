@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SvcCatalogCategory xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isActive>true</isActive>
+    <isProtected>false</isProtected>
+    <masterLabel>[Sample] General</masterLabel>
+    <sortOrder>1</sortOrder>
+</SvcCatalogCategory>
