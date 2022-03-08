@@ -1,0 +1,37 @@
+{
+    "orgName": "Service Catalog Recipes",
+    "edition": "Partner Developer",
+    "features": [
+        "ForceComPlatform",
+        "Communities",
+        "Knowledge",
+        "EmployeeExperience",
+        "PersonAccounts",
+        "ITAgent",
+        "ServiceCatalog"
+    ],
+    "language": "en_US",
+    "settings": {
+        "lightningExperienceSettings": {
+            "enableS1DesktopEnabled": true
+        },
+        "chatterSettings": {
+            "enableChatter": true
+        },
+        "communitiesSettings": {
+            "enableNetworksEnabled": true
+        },
+        "languageSettings": {
+            "enableTranslationWorkbench": true,
+            "enablePlatformLanguages": true,
+            "enableEndUserLanguages": true
+        },
+        "knowledgeSettings": {
+            "enableKnowledge": true,
+            "enableLightningKnowledge": true
+        },
+        "mobileSettings": {
+            "enableS1EncryptedStoragePref2": false
+        }
+    }
+}
