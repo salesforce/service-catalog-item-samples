@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<SvcCatalogFulfillmentFlow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <flow>Testing_Create_Multiple_Objects</flow>
-    <isProtected>false</isProtected>
-    <masterLabel>[Sample] Testing Create Case and Incident</masterLabel>
-    <description>The fulfillment creates two different object types linked to the Request (Case and Incident).</description>
-</SvcCatalogFulfillmentFlow>
