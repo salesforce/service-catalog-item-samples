@@ -8,6 +8,7 @@
     </formulas>
     <label>[Sample] New Salesforce Org User</label>
     <processType>ServiceCatalogItemFlow</processType>
+    <isTemplate>true</isTemplate>
     <screens>
         <name>additional_questions</name>
         <label>[Sample] New Salesforce Org User Questions</label>

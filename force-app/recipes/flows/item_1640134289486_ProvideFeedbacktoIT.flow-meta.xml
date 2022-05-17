@@ -32,6 +32,7 @@
     </formulas>
     <label>[Sample] Provide Feedback to IT</label>
     <processType>ServiceCatalogItemFlow</processType>
+    <isTemplate>true</isTemplate>
     <screens>
         <name>additional_questions</name>
         <label>[Sample] Provide Feedback to IT Questions</label>

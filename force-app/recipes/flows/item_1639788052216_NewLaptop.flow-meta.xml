@@ -32,6 +32,7 @@
     </formulas>
     <label>[Sample] New Laptop</label>
     <processType>ServiceCatalogItemFlow</processType>
+    <isTemplate>true</isTemplate>
     <screens>
         <name>additional_questions</name>
         <label>[Sample] New Laptop Questions</label>

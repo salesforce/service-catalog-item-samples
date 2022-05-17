@@ -75,6 +75,7 @@
     </decisions>
     <description>Creates a case owned by the current user&apos;s employee. User must enter the developer name of a Case Record Type to use when creating the Case.</description>
     <interviewLabel>Create Case by Record Type {!$Flow.CurrentDateTime}</interviewLabel>
+    <isTemplate>true</isTemplate>
     <label>[Sample] Create Case by Record Type</label>
     <processMetadataValues>
         <name>BuilderType</name>

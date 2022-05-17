@@ -46,6 +46,7 @@
         </noMoreValuesConnector>
     </loops>
     <processType>ServiceCatalogItemFlow</processType>
+    <isTemplate>true</isTemplate>
     <screens>
         <name>additional_questions</name>
         <label>[Sample] Request Shipping Questions</label>

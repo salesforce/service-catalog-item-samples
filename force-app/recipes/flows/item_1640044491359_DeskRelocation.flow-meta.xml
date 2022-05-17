@@ -17,6 +17,7 @@
     </formulas>
     <label>[Sample] Desk Relocation</label>
     <processType>ServiceCatalogItemFlow</processType>
+    <isTemplate>true</isTemplate>
     <screens>
         <name>additional_questions</name>
         <label>[Sample] Desk Relocation Questions</label>

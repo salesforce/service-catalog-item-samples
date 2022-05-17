@@ -32,6 +32,7 @@
     </assignments>
     <description>Calls the &quot;Create Case by Assignment Rule&quot; flow twice, using the same Description for each.</description>
     <interviewLabel>Create Two Cases By Assignment Rule {!$Flow.CurrentDateTime}</interviewLabel>
+    <isTemplate>true</isTemplate>
     <label>[Sample] Create Two Cases By Assignment Rule</label>
     <processMetadataValues>
         <name>BuilderType</name>

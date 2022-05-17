@@ -193,6 +193,7 @@
     </decisions>
     <description>Uses an Apex utility to create a case assigned using either a given assignment rule name, or if no name provided, uses the default active assignment rule.</description>
     <interviewLabel>Create Case Assigned Via Rules {!$Flow.CurrentDateTime}</interviewLabel>
+    <isTemplate>true</isTemplate>
     <label>[Sample] Create Case with Assignment Rule</label>
     <processMetadataValues>
         <name>BuilderType</name>
